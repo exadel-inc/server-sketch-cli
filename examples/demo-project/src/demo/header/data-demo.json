@@ -1,0 +1,13 @@
+{
+  "@extend": "./data-default.json",
+  "items": [
+    {
+      "href": "/",
+      "title": "Home"
+    },
+    {
+      "href": "/demo-project/",
+      "title": "Demo Project"
+    }
+  ]
+}

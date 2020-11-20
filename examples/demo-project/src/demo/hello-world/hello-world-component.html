@@ -1,0 +1,19 @@
+<div class="card">
+  {{? data.sampleIMG }}
+  <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
+       preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>
+    Placeholder</title>
+    <rect width="100%" height="100%" fill="#868e96"></rect>
+    <text style="transform: translate(-45px, 0%);" x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+  </svg>
+  {{?}}
+  <div class="card-body">
+    <h5 class="card-title">{{! data.heading }}</h5>
+    {{? data.lead }}<p class="card-text">{{= data.lead }}</p>{{?}}
+    {{? data.links }}
+    {{~ data.links :link}}
+    {{= component.renderComponent(`demo/${link.ctype}`, { data: link } ) }}
+    {{~}}
+    {{?}}
+  </div>
+</div>

@@ -1,0 +1,4 @@
+{
+  "@extend": "./data-example2.json",
+  "sampleIMG": true
+}

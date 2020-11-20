@@ -1,0 +1,4 @@
+{
+  "view": "header.html",
+  "controller": "HeaderController.js"
+}

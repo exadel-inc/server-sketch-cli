@@ -1,0 +1,42 @@
+---
+layout: %%PATH_TO_VIEWS%%/layouts/demo-project.html
+title: 'I have created my first component: Hello World!'
+---
+
+{{##content:
+<div class="container">
+  <h1 class="text-center">Hello World demo page</h1>
+  <hr/>
+  <h2 class="text-center">Example 1</h2>
+  <div class="col-md-3">
+    {{= page.renderComponent('demo/hello-world', { data: 'example1' } ) }}
+  </div>
+
+  <h2 class="text-center">Example 2</h2>
+  <div class="col-md-3">
+    {{= page.renderComponent('demo/hello-world', { data: 'example2' } ) }}
+  </div>
+
+  <h2 class="text-center">Example 3</h2>
+  <div class="col-md-3">
+    {{= page.renderComponent('demo/hello-world', { data: 'example3' } ) }}
+  </div>
+
+  <h2 class="text-center">Example 4</h2>
+  <div class="col-md-3">
+    {{= page.renderComponent('demo/hello-world', { data: {
+    'heading': 'Example #4',
+    'sampleIMG': true,
+    'links': [{
+    'ctype': 'link',
+    'title': 'Regular Link',
+    'href': '#'
+    }, {
+    'ctype': 'button',
+    'title': 'Primary Button',
+    'href': '#'
+    }]
+    } } ) }}
+  </div>
+</div>
+#}}

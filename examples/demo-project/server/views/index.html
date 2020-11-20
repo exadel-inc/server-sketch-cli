@@ -1,0 +1,28 @@
+---
+layout: %%PATH_TO_VIEWS%%/layouts/demo-project.html
+---
+
+{{##content:
+
+<h1 class="text-center">{{= page.getPageTitle(layout.title) || 'Home' }}</h1>
+
+<hr/>
+{{ let childPages = page.invokeController('InnerPages', page.location.pathname); }}
+{{? childPages && childPages.length }}
+<ol class="flex-column container">
+  {{~ childPages :childPage}}
+  <li class="nav-item">
+    <a href="{{= page.resolveURL(childPage.href) }}" class="nav-link">
+      {{= childPage.title }}
+    </a>
+  </li>
+  {{~}}
+</ol>
+{{??}}
+<h5>No pages</h5>
+{{?}}
+
+<hr/>
+
+
+#}}

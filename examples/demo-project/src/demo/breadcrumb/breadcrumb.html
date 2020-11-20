@@ -1,0 +1,22 @@
+{{
+if (!data.items) {
+page.invokeController('Breadcrumbs');
+data.items = page._breadcrumbs;
+}
+}}
+
+
+<nav aria-label="breadcrumb" style="background-color: #e9ecef;">
+  <ol class="breadcrumb container">
+    {{~ data.items :item:i}}
+    {{ let isLast = (i === data.items.length - 1); }}
+    <li class="breadcrumb-item {{? isLast }}active{{?}}">
+      {{? !isLast }}
+      {{= component.renderComponent('demo/link', { data: item, classList: 'text-dark' }) }}
+      {{??}}
+      <span>{{! item.title }}</span>
+      {{?}}
+    </li>
+    {{~}}
+  </ol>
+</nav>

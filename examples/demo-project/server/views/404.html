@@ -1,0 +1,36 @@
+---
+layout: %%PATH_TO_VIEWS%%/layouts/demo-project.html
+---
+
+{{##content:
+
+<style>
+  .wr404 {
+    background-image: url("/images/demo/favicon.png");
+    background-size: 24px;
+    opacity: .2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+
+<div class="wrp py-5" style="position: relative">
+  <div class="wr404"></div>
+  <div class="container py-5 my-5 text-center" style="position: relative">
+    <h1>404</h1>
+    <h2>Page Not Found</h2>
+    <div>
+      <code style="padding: 5px; display: inline-block; border: 1px dashed #e83e8c;">{{= page.request.originalUrl
+        }}</code>
+    </div>
+    <img src="/images/demo/84xLDr-small.png" alt=""/>
+    <div class="pt-3">
+      {{= page.renderComponent('demo/button', { data: { title: '&nbsp;&nbsp;&nbsp;Back&nbsp;&nbsp;&nbsp;', 'href':
+      'javascript: window.history.back();' } }) }}
+    </div>
+  </div>
+</div>
+
+#}}

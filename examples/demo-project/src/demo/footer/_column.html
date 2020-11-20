@@ -1,0 +1,11 @@
+{{
+let footerItem = data;
+}}
+<div class="col-6 col-md">
+  <h5>{{! footerItem.group }}</h5>
+  <ul class="list-unstyled text-small">
+    {{~ footerItem.links :link }}
+    <li><a class="text-muted" href="javascript: window.alert('Just for demo!')">{{! link }}</a></li>
+    {{~}}
+  </ul>
+</div>

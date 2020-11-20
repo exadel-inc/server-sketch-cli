@@ -1,0 +1,34 @@
+{
+  "@extend": "./data-default.json",
+  "items": [
+    {
+      "group": "Features",
+      "links": [
+        "Cool stuff",
+        "Random feature",
+        "Team feature",
+        "Stuff for developers",
+        "Another one",
+        "Last time"
+      ]
+    },
+    {
+      "group": "Resources",
+      "links": [
+        "Resource",
+        "Resource name",
+        "Another resource",
+        "Final resource"
+      ]
+    },
+    {
+      "group": "About",
+      "links": [
+        "Team",
+        "Locations",
+        "Privacy",
+        "Terms"
+      ]
+    }
+  ]
+}

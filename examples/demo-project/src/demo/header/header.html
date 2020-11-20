@@ -1,0 +1,20 @@
+<div class="container d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom">
+  <h5 class="my-0 mr-md-auto font-weight-normal">
+    <a href="/">
+      <img src="{{= data.logo }}" alt="{{! data.alt || '' }}"/>
+      <span style="color: #00a8f3">{{! data.sitename || ''}}</span>
+    </a>
+  </h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    {{~ data.items :item }}
+    {{= component.renderComponent('demo/link', { data: item, classList: 'p-2 text-dark' } ) }}
+    {{~}}
+  </nav>
+  {{= component.renderComponent('demo/button', {
+  data: {
+  title: 'Sign In',
+  'href': `javascript: window.alert('I was clicked!');`
+  },
+  type: 'btn-outline-primary'
+  }) }}
+</div>

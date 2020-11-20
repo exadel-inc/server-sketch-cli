@@ -1,0 +1,21 @@
+<div class="mt-4 mt-md-5" style="background-color: rgba(0, 168, 243, 0.1);">
+  <footer class="pt-4 pt-md-5 pb-2 pb-md-3 border-top container">
+    <div class="row">
+      <div class="col-12 col-md">
+        {{? data.logo }}<img class="mb-2" src="{{= data.logo }}" alt="{{! data.alt || '' }}" width="24" height="24">{{?}}
+        <span>
+        {{! data.sitename || '' }}
+      </span>
+        <small class="d-block mb-3 text-muted">{{! data.desc || '' }}</small>
+      </div>
+      {{~ data.items :footerItem}}
+      {{= partial('./_column.html', footerItem) }}
+      {{~}}
+    </div>
+    <div class="row">
+      <div class="col-12 col-md text-center text-muted">
+        <small>Server time: <strong>{{= new Date().toLocaleString() }}</strong></small>
+      </div>
+    </div>
+  </footer>
+</div>
